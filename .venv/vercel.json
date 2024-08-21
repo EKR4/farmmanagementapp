@@ -1,8 +1,8 @@
 {
     "builds": [
       {
-        "src": ".venv/Include/app.py",
-        "use": "@vercel/python",
+        "src": "./Include/app.py",
+        "use": "streamlit run",
         "config": {
           "runtime": "python3.10"
         }
@@ -11,7 +11,7 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": ".venv/Include/app.py"
+        "dest": "./Include/app.py"
       }
     ]
   }
