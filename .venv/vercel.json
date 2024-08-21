@@ -1,11 +1,17 @@
 {
     "builds": [
       {
-        "src": "./Include/app.py",
+        "src": ".venv/Include/app.py",
         "use": "@vercel/python",
         "config": {
           "runtime": "python3.10"
         }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": ".venv/Include/app.py"
       }
     ]
   }
